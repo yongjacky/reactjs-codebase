@@ -1,0 +1,40 @@
+// Here you can add other styles
+
+@mixin ImageBox($width){
+    img {
+        width: $width;
+        &:hover {
+            cursor: pointer;     
+        }  
+    } 
+}
+
+.ImageCategorisation {
+    padding-left: 30px;
+    padding-top: 20px;
+
+    .ImageBox {
+        @include ImageBox(500px);
+        padding-bottom: 10px;
+    }
+}
+
+.editLink {
+    color: black;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.excelLogo {
+    img {
+        width: 35%;
+        height: 35%;
+    }
+}
+.smallImage {
+    img {
+        width: 35%;
+        height: 35%;
+    }
+}
