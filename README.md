@@ -36,3 +36,11 @@ Add a "flow" script to your package.json
     "flow": "flow"
 }
 ```
+
+#### VS Code : Disable typescript
+Disable typescript in your VS Code's workspace setting
+```
+{
+    "javascript.validate.enable": false
+}
+```
