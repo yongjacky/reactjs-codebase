@@ -1,5 +1,10 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+
+type ContentsListPropsType={
+    array: Array<any>,
+    keyField: string,
+    descField: string
+}
 
 const ContentsList=props=>{
     const { array,keyField,descField  } = props
@@ -17,12 +22,6 @@ const ContentsList=props=>{
             </div>
         </div>  
     )
-}
-
-ContentsList.propTypes={
-    array: PropTypes.array.isRequired,
-    keyField: PropTypes.string.isRequired,
-    descField: PropTypes.string.isRequired,
 }
 
 export default ContentsList

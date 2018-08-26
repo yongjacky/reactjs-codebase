@@ -1,3 +1,4 @@
+//@flow
 import React from 'react'
 import { connect } from 'react-redux'
 import * as actions from '../redux/sample/actions'
@@ -7,7 +8,12 @@ import Error from '../components/Error'
 import ContentLink from '../components/ContentLink'
 import ContentsList from '../components/ContentsList'
 
-class Sample extends React.Component {
+type SampleProps={
+    sample: any,
+    getVendors: any
+}
+
+class Sample extends React.Component<SampleProps> {
 
     componentWillMount(){
         this.refreshData()

@@ -1,3 +1,4 @@
+//@flow
 import React from 'react'
 import ContainerRowSpace from '../components/ContainerRowSpace'
 import PageTitle from '../components/PageTitle'

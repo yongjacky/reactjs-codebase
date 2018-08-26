@@ -1,7 +1,11 @@
+//@flow
 import React from 'react'
-import PropTypes from 'prop-types'
 
-const PageTitle=props=>{
+type PageTitleProps = {
+    title: string
+}
+
+const PageTitle=(props: PageTitleProps)=>{
     return (
         <div className='row'>
             <div className='col-sm'>
@@ -9,10 +13,6 @@ const PageTitle=props=>{
             </div>
         </div>
     )
-}
-
-PageTitle.propTypes={
-    title: PropTypes.string.isRequired
 }
 
 export default PageTitle

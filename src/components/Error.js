@@ -1,7 +1,11 @@
+//@flow
 import React from 'react'
-import PropTypes from 'prop-types'
 
-const Error=props=>{
+type errorProps={
+    error: string
+}
+
+const Error=(props: errorProps)=>{
     const { error } = props
 
     if (error){
@@ -17,10 +21,6 @@ const Error=props=>{
     }
 
     return null
-}
-
-Error.propTypes={
-    error: PropTypes.string.isRequired
 }
 
 export default Error

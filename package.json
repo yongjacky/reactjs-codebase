@@ -1,15 +1,17 @@
 {
   "name": "reactjs-codebase",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Sample of reactjs codebase",
   "author": "Jacky Yong <yong.jacky@gmail.com>",
   "license": "BSD",
   "private": true,
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.2",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.7.0",
+    "babel-preset-flow": "^6.23.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
     "babel-preset-stage-3": "^6.24.1",
@@ -18,6 +20,7 @@
     "css-loader": "^0.28.7",
     "extract-text-webpack-plugin": "^3.0.0",
     "file-loader": "^0.11.2",
+    "flow-bin": "^0.79.1",
     "html-loader": "^0.5.1",
     "html-webpack-plugin": "^2.30.1",
     "node-sass": "^4.9.2",
@@ -61,7 +64,8 @@
     "dev": "webpack -d --progress --watch --profile --json > compilation-stats.json --env.dev",
     "start": "webpack-dev-server --progress --colors --inline --env.dev",
     "build": "webpack -p --progress --env.prod",
-    "clean": "rimraf ./build"
+    "clean": "rimraf ./build",
+    "flow": "flow"
   },
   "engines": {
     "node": ">= 6.0.0",

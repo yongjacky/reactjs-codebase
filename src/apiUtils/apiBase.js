@@ -1,10 +1,14 @@
-const DEFAULT_HEADER='phoenix-auth-token';
-export const API_GET='GET';
-export const API_POST='POST';
-export const API_PUT='PUT';
-export const API_DELETE='DELETE';
+// @flow
+/* eslint-disable no-console */
+const DEFAULT_HEADER:string ='phoenix-auth-token';
+export const API_GET:string ='GET';
+export const API_POST:string ='POST';
+export const API_PUT:string ='PUT';
+export const API_DELETE:string ='DELETE';
 
-export const callFetch = (method,url,payload,authToken,authHeader) => {
+type API_METHOD = 'GET' | 'POST' | 'PUT' | 'DELETE'
+
+export const callFetch = (method: API_METHOD,url: string,payload?: string,authToken?: string,authHeader?:string) => {
     let header=DEFAULT_HEADER;
     
     if (authHeader) {
@@ -32,9 +36,3 @@ export const callFetch = (method,url,payload,authToken,authHeader) => {
         });
     }
 }
-
-exports.API_GET=API_GET;
-exports.API_POST=API_POST;
-exports.API_PUT=API_PUT;
-exports.API_DELETE=API_DELETE;
-exports.callFetch=callFetch;

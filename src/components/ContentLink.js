@@ -1,8 +1,13 @@
+//@flow
 import React from 'react'
 import { Link } from 'react-router-dom'
-import PropTypes from 'prop-types'
 
-const ContentLink=props=>{
+type ContentLinkPropsType={
+    to: string,
+    linkTitle: string
+}
+
+const ContentLink=(props:ContentLinkPropsType)=>{
     return (
         <div className='row'>
             <div className='col-sm'>
@@ -12,11 +17,6 @@ const ContentLink=props=>{
             </div>
         </div>
     )
-}
-
-ContentLink.propTypes={
-    to: PropTypes.string.isRequired,
-    linkTitle: PropTypes.string.isRequired
 }
 
 export default ContentLink
