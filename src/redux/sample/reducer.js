@@ -2,24 +2,24 @@
 import * as actionTypes from './actionTypes';
 import reduce from '../reduce';
 
-type stateType = {
+type State = {
     vendors: Array<any>,
     error: string
 }
 
-const initialState:stateType = {
+const initialState:State = {
     vendors: [],
     error: '',
 }
 
-const refreshVendors = (state,action)=>{
+const refreshVendors = (state:State,action:State)=>{
     return {
         ...state,
         vendors: action.vendors,
     }
 }
 
-const refreshVendorsError = (state,action)=> {
+const refreshVendorsError = (state:State,action:State)=> {
     return {
         ...state,
         error: action.error

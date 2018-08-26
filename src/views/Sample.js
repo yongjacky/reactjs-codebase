@@ -1,5 +1,5 @@
 //@flow
-import React from 'react'
+import * as React from 'react'
 import { connect } from 'react-redux'
 import * as actions from '../redux/sample/actions'
 import ContainerRowSpace from '../components/ContainerRowSpace'
@@ -8,8 +8,13 @@ import Error from '../components/Error'
 import ContentLink from '../components/ContentLink'
 import ContentsList from '../components/ContentsList'
 
+type SType = {
+    error: string,
+    vendors: Array<any>
+}
+
 type SampleProps={
-    sample: any,
+    sample: SType,
     getVendors: any
 }
 
@@ -53,7 +58,7 @@ class Sample extends React.Component<SampleProps> {
     }
 }
 
-const mapStateToProps = (state, ownProps) => {
+const mapStateToProps = (state:SampleProps, ownProps:any) => {
     return {
         sample: state.sample
     }
